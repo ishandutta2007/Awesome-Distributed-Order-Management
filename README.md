@@ -66,7 +66,7 @@ Below is a detailed comparison of enterprise SaaS and hosted Distributed Order M
 
 ## 💻 Open-Source GitHub Projects 🔓
 
-Below is a curated list of active open-source Distributed Order Management frameworks, ERP systems, and microservices reference implementations, sorted by **GitHub Stars_Count (Descending)** ⭐.
+Below is a curated list of active open-source Distributed Order Management frameworks, ERP systems, and microservices reference implementations, sorted by **GitHub_Stars_Count (Descending)** ⭐.
 
 | Repository / Project 📦 | Stars_Count 🌟 | Primary Tech Stack 🛠️ | Description & Key DOM Features 📝 |
 | :--- | :--- | :--- | :--- |
