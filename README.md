@@ -6,7 +6,7 @@
 
 <p align="center">
   <a href="https://github.com/ishandutta2007/Awesome-Awesome-Awesome"><img src="https://img.shields.io/badge/Awesome-%E2%9C%94-blueviolet?style=flat-square&logo=github" alt="Awesome"/></a><a href="https://discord.gg/jc4xtF58Ve"><img src="https://img.shields.io/badge/Discord-5865F2?style=for-the-badge&logo=discord&logoColor=white" alt="Discord" /></a>
-  <a href="https://github.com/ishandutta2007/Awesome-Distributed-Order-Management/stargazers"><img src="https://img.shields.io/github/stars/ishandutta2007/Awesome-Distributed-Order-Management?style=social" alt="GitHub Stars" /></a>
+  <a href="https://github.com/ishandutta2007/Awesome-Distributed-Order-Management/stargazers"><img src="https://img.shields.io/github/stars/ishandutta2007/Awesome-Distributed-Order-Management?style=social" alt="GitHub_Stars" /></a>
   <a href="https://github.com/ishandutta2007/Awesome-Distributed-Order-Management/network/members"><img src="https://img.shields.io/github/forks/ishandutta2007/Awesome-Distributed-Order-Management?style=social" alt="GitHub Forks" /></a>
   <a href="https://github.com/ishandutta2007/Awesome-Distributed-Order-Management/blob/main/LICENSE"><img src="https://img.shields.io/badge/License-MIT-green.svg" alt="License" /></a>
   <a href="https://github.com/ishandutta2007"><img alt="GitHub followers" src="https://img.shields.io/github/followers/ishandutta2007?label=Follow" /></a>
@@ -66,9 +66,9 @@ Below is a detailed comparison of enterprise SaaS and hosted Distributed Order M
 
 ## 💻 Open-Source GitHub Projects 🔓
 
-Below is a curated list of active open-source Distributed Order Management frameworks, ERP systems, and microservices reference implementations, sorted by **GitHub Star Count (Descending)** ⭐.
+Below is a curated list of active open-source Distributed Order Management frameworks, ERP systems, and microservices reference implementations, sorted by **GitHub Stars_Count (Descending)** ⭐.
 
-| Repository / Project 📦 | Star Count 🌟 | Primary Tech Stack 🛠️ | Description & Key DOM Features 📝 |
+| Repository / Project 📦 | Stars_Count 🌟 | Primary Tech Stack 🛠️ | Description & Key DOM Features 📝 |
 | :--- | :--- | :--- | :--- |
 | **[medusajs/medusa](https://github.com/medusajs/medusa/stargazers)** | [![Stars](https://img.shields.io/github/stars/medusajs/medusa?style=social&color=white)](https://github.com/medusajs/medusa/stargazers) | Node.js, TypeScript, PostgreSQL | Open-source headless commerce platform with multi-warehouse inventory reservation, order routing plugins, and automated fulfillment workflows. |
 | **[saleor/saleor](https://github.com/saleor/saleor/stargazers)** | [![Stars](https://img.shields.io/github/stars/saleor/saleor?style=social&color=white)](https://github.com/saleor/saleor/stargazers) | Python, Django, GraphQL, Next.js | High-performance, headless GraphQL commerce engine with multi-channel stock allocation, order status state machines, and fulfillment tracking. |
@@ -119,3 +119,12 @@ Thank you for supporting open-source logistics technology! 🚀
 - This is a **community-curated** repository for informational and architectural evaluation purposes.
 - Distributed order management tools process sensitive customer, inventory, and transaction data. Production deployments require PCI-DSS compliance, GDPR/CCPA data protection, and robust auth mechanisms.
 - Open-source reference architectures provide solid event-driven blueprints but require custom carrier integrations and optimization tuning before enterprise deployment.
+
+## Star History
+
+<a href="https://star-history.com/#ishandutta2007/Awesome-Distributed-Order-Management&Timeline" align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="assets/ishandutta2007_Awesome-Distributed-Order-Management_growth.svg">
+    <img alt="Star History Chart" src="assets/ishandutta2007_Awesome-Distributed-Order-Management_growth.svg">
+  </picture>
+</a>
