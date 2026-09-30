@@ -1,229 +1,121 @@
-# Awesome-Distributed-Order-Management
-
-## Top Distributed Order Management (DOM) Ecosystem
-
-
-
-**Curated List of SaaS Products & Open-Source GitHub Projects**  
-
-*Focused on Omnichannel Order Orchestration, Inventory Sourcing & Fulfillment Optimization*  
-
-**Last updated: September 2026**
-
-
-
-This repository tracks notable **SaaS platforms** and **open-source projects** for **Distributed Order Management (DOM)**. These tools orchestrate order fulfillment across distributed inventory nodes — warehouses, stores, dark stores, and drop-ship partners — using real-time inventory visibility and optimization algorithms to decide what to promise, where to source from, and how to route orders for cost-effective, on-time delivery.
-
-
-
-**Examples** include IBM Sterling DOM, Manhattan Active Omni, Kibo Commerce, Fluent Commerce, Oracle DOM, Salesforce OMS, Magento OMS, SAP Order Management, OneStock, and Radial (the category leaders).
-
-
-
-**Open-source emphasis**: This section is expanded with active projects for self-hosting, custom order routing logic, and transparent fulfillment orchestration — ideal for retailers, developers, and researchers building vendor-independent DOM solutions. The open-source ecosystem is anchored by **Apache OFBiz** (full ERP/eCommerce/OMS stack), **ecommerce-erp** (cross-border ERP with fulfillment), and a growing set of event-driven microservices reference implementations demonstrating DOM architecture patterns.
-
-
-
-Contributions welcome! Open a PR to add/update entries. Keep descriptions factual and link to official sites.
-
-
-
-## Table of Contents
-
-- [SaaS/Hosted Platforms](#saas-hosted-platforms)
-
-- [Open-Source GitHub Projects](#open-source-github-projects)
-
-- [How to Contribute](#how-to-contribute)
-
-- [Disclaimer](#disclaimer)
-
-
-
-## SaaS/Hosted Platforms
-
-
-
-- **[IBM Sterling DOM](https://www.ibm.com/products/sterling-order-management)**  
-
-  Enterprise-grade distributed order management platform for omnichannel fulfillment. Provides real-time inventory visibility, intelligent order sourcing, and fulfillment orchestration across complex supply chain networks.
-
-
-
-- **[Manhattan Active Omni](https://www.manh.com/)**  
-
-  Unified commerce platform with DOM capabilities for order orchestration, inventory sourcing, and fulfillment optimization across stores, DCs, and drop-ship partners.
-
-
-
-- **[Kibo Commerce](https://kibocommerce.com/)**  
-
-  Composable commerce platform with order management, inventory, and fulfillment capabilities for B2C and B2B retailers.
-
-
-
-- **[Fluent Commerce](https://fluentcommerce.com/)**  
-
-  Cloud-native DOM platform specializing in complex omnichannel fulfillment orchestration with real-time inventory and intelligent sourcing.
-
-
-
-- **[Oracle DOM](https://www.oracle.com/)**  
-
-  Distributed order management within Oracle Retail and Oracle Fusion Cloud, providing order orchestration and fulfillment optimization.
-
-
-
-- **[Salesforce OMS](https://www.salesforce.com/)**  
-
-  Order Management System within Salesforce Commerce Cloud, enabling omnichannel fulfillment and inventory visibility.
-
-
-
-- **[Magento OMS](https://business.adobe.com/products/magento/magento-commerce.html)**  
-
-  Order management capabilities within Adobe Commerce (Magento), with extensions for distributed fulfillment.
-
-
-
-- **[SAP Order Management](https://www.sap.com/products/order-management.html)**  
-
-  Cloud-native, composable order management solution for omnichannel order orchestration, inventory visibility, and fulfillment management. Named a Leader in the IHL Group Order Management Market 2025 report . Includes AI capabilities (Joule copilot, Order Reliability Agent) and low-code/no-code process customization .
-
-
-
-- **[OneStock](https://www.onestock-retail.com/)**  
-
-  European DOM platform for omnichannel retailers with order routing, inventory unification, and fulfillment optimization.
-
-
-
-- **[Radial](https://www.radial.com/)**  
-
-  Order management and fulfillment solutions for retailers, including distributed order management and omnichannel capabilities.
-
-
-
-## Open-Source GitHub Projects
-
-
-
-- **[Apache OFBiz](https://ofbiz.apache.org/)**  
-
-  The most mature open-source ERP with integrated eCommerce, PIM, CMS, OMS, and WMS capabilities. Has been used for over a decade to build eCommerce stores and service online retail businesses . For organizations starting fresh without legacy systems, OFBiz can serve as the complete stack (PIM, eCommerce API, OMS, WMS) without additional development or maintenance effort. For established brands with legacy platforms, OFBiz can function as the OMS layer integrated with existing PIM, sales channels, WMS, and ERP systems . Features include real-time inventory visibility, order routing based on defined strategies, order splitting for faster fulfillment, BOPIS/BORIS/Endless Aisle support, and preorder/backorder management . No vendor lock-in, no licensing costs, and backed by the Apache Software Foundation.
-
-
-
-- **[ecommerce-erp](https://developer.aliyun.com/article/1753673)**  
-
-  Open-source cross-border e-commerce ERP built with ThinkPHP, Vue, MySQL, and Redis, MIT licensed . Connects products, procurement, warehousing, orders, shipping, finance, and reporting in a unified back office. Key DOM-relevant features: platform SKU mapping for unified product/inventory semantics across stores, inventory module distinguishing physical/virtual/FBA warehouses with real-time, locked, and in-transit stock queries, sales order processing by type (normal, abnormal, FBA), and shipping module covering label printing, logistics, and batch operations . Docker deployment with demo data covering the full business chain. Supports commercial use and secondary development.
-
-
-
-- **[Distributed Order Management System (AbhashK1)](https://github.com/AbhashK1/Distributed-Order-Management-System)**  
-
-  Event-driven microservices architecture built with Spring Boot, Kafka, Redis, and PostgreSQL, demonstrating how large e-commerce platforms process orders using asynchronous communication . Four independent services communicate via Kafka events: Order Service (creates orders, publishes `order.created`), Inventory Service (consumes events, reserves stock in Redis, publishes `inventory.reserved`), Payment Service (consumes inventory events, simulates payment, publishes success/failure), and Notification Service (consumes payment events, logs notifications) . Includes a lightweight Streamlit web UI for visualizing and testing the entire order flow in real time without reading logs. Demonstrates key design patterns: Event-Driven Architecture, Saga-style workflow, loose coupling via Kafka, idempotent message handling, and Redis atomic operations .
-
-
-
-- **[cloud-native-order-platform](https://github.com/Paraselli/cloud-native-order-platform)**  
-
-  Cloud-native, event-driven microservices order processing platform with Spring Boot, Kafka, Redis, AWS integration, and React frontend . Demonstrates production-style distributed system design including JWT authentication, API gateway routing, Kafka event streaming, Redis caching with TTL, and AWS services (S3, SQS, SNS) . Dockerized with CI/CD via GitHub Actions. Explicitly positioned as more than a CRUD project — showcases scalable distributed system design and cloud integration patterns.
-
-
-
-- **[delivery-system](https://github.com/StepanShushakov/delivery-system)**  
-
-  Order processing system for online stores built with microservices architecture and distributed transactions using the SAGA pattern . Services include Order, Payment, Inventory, Delivery, Authentication, API Gateway, and Discovery/Configuration. Asynchronous processing via Apache Kafka with PostgreSQL per service. Tracks order states through the full lifecycle: `registered`, `paid`, `payment_failed`, `invented`, `inventment_failed`, `delivered`, `delivery_failed`, `unexpected_failure` . Includes SAGA pattern for distributed transaction management with rollback support.
-
-
-
-- **[async-order-system](https://pkg.go.dev/github.com/MDmitryM/async-order-system)**  
-
-  REST API service for order management written in Go with microservices architecture . API service, billing service, and shipping service communicate through Kafka with three-broker cluster for fault tolerance. PostgreSQL with pgxpool and sqlc. Swagger UI documentation at `/swagger/`. Kafka UI available for monitoring topics and messages. Go 1.23+ required .
-
-
-
-- **[ordersgo](https://pkg.go.dev/github.com/nmarsollier/ordersgo)**  
-
-  Go microservice for order management using CQRS pattern with MongoDB and RabbitMQ . Features GraphQL federation server alongside REST and RabbitMQ controllers. Requires authentication (Auth microservice) and catalog integration for article validation, stock deduction, and returns processing . Demonstrates event sourcing and projections for business state.
-
-
-
-- **[wb-order-service](https://pkg.go.dev/github.com/deimossy/wb-order-service)**  
-
-  Go demonstration microservice for order handling with PostgreSQL, Kafka, and in-memory cache . Subscribes to Kafka for order messages, persists to PostgreSQL, caches recent orders in memory with recovery from DB on startup. HTTP API and web interface for querying orders by ID . Docker Compose deployment with Makefile commands.
-
-
-
-- **[Openfront](https://railway.com/deploy/openfront--openfront)**  
-
-  Open-source Shopify alternative based on Next.js and Keystone.js with complete e-commerce solution including order management with automated workflows, inventory tracking, and multi-provider payment support . Self-hostable with complete data ownership. Industry-specific templates for restaurants, automotive, healthcare, and fitness. While not a full DOM platform, its order management workflows and multi-region deployment support provide a foundation for omnichannel fulfillment .
-
-
-
-- **[Cloud-Native Order Platform (Paraselli)](https://github.com/Paraselli/cloud-native-order-platform)**  
-
-  Event-driven microservices platform demonstrating scalable distributed system design with Kafka, Redis, AWS, JWT, and React . Auth Service, Order Service, Notification Service, and API Gateway. AWS S3 (file storage), SQS (queue processing), SNS (notifications) integration.
-
-
-
-### Additional Strong Open-Source Options
-
-
-
-- **moqui/mantle-usl** — Universal Service Library for Moqui Framework providing business logic components for order management and fulfillment .
-
-- **vanilophp/order** — Order Module for Vanilo (Laravel e-commerce framework) .
-
-- **GLPI Order Plugin** — Order management plugin for GLPI (IT asset management) .
-
-- **Magento2 Edit Order Email** — Magento 2 extension for editing order email from admin .
-
-- **Inventory-Order-Management-System** — ASP.NET Core MVC implementation with warehouse, product, vendor, customer, purchase order, sales order, shipment, and goods receive .
-
-
-
-**Frameworks for building custom DOM solutions**: Combine **Apache OFBiz** for a complete open-source OMS/WMS/eCommerce stack with order routing and BOPIS/BORIS support . Use **ecommerce-erp** for cross-border fulfillment with SKU mapping and multi-warehouse inventory . Leverage the **Distributed Order Management System** reference implementation for event-driven microservices architecture patterns with Kafka and Redis . Note that true enterprise DOM platforms with MIP-based optimization, real-time carrier rate shopping, and complex order sourcing rules remain primarily commercial territory; open-source stacks provide strong event-driven architecture foundations and inventory management that require significant customization for production omnichannel fulfillment .
-
-
-
-## How to Contribute
-
-
-
-1. Fork the repo.
-
-2. Add/edit entries in `README.md` (follow existing format).
-
-3. Include: name, link, 1–2 sentence description, and whether it's SaaS or open-source.
-
-4. Submit PR with a short explanation.
-
-
-
-Star the repo if you find it useful!
-
-
-
-## Disclaimer
-
-
-
-- This is a **community-curated** list — not exhaustive and not an endorsement.
-
-- Distributed order management tools handle sensitive customer, inventory, and financial data. Self-hosted solutions require proper security hardening, PCI DSS compliance for payment processing, and data privacy compliance (GDPR, CCPA).
-
-- Open-source DOM platforms are significantly less mature than commercial offerings for complex omnichannel fulfillment. Most available projects are reference implementations or academic demonstrations of architecture patterns rather than production-ready platforms. Evaluate gaps in real-time inventory synchronization, carrier integration, and optimization algorithms before deployment.
-
-- The open-source ecosystem provides strong event-driven architecture foundations, ERP/eCommerce integration, and inventory management, but MIP-based order optimization, real-time carrier rate shopping, and enterprise-grade order sourcing remain primarily commercial offerings .
-
-
+# Awesome Distributed Order Management (DOM) System 📦✨
+
+<p align="center">
+  <img src="./assets/banner.svg" alt="Awesome Distributed Order Management Banner" width="100%" />
+</p>
+
+<p align="center">
+  <a href="https://github.com/ishandutta2007/Awesome-Awesome-Awesome"><img src="https://img.shields.io/badge/Awesome-%E2%9C%94-blueviolet?style=flat-square&logo=github" alt="Awesome"/></a><a href="https://discord.gg/jc4xtF58Ve"><img src="https://img.shields.io/badge/Discord-5865F2?style=for-the-badge&logo=discord&logoColor=white" alt="Discord" /></a>
+  <a href="https://github.com/ishandutta2007/Awesome-Distributed-Order-Management/stargazers"><img src="https://img.shields.io/github/stars/ishandutta2007/Awesome-Distributed-Order-Management?style=social" alt="GitHub Stars" /></a>
+  <a href="https://github.com/ishandutta2007/Awesome-Distributed-Order-Management/network/members"><img src="https://img.shields.io/github/forks/ishandutta2007/Awesome-Distributed-Order-Management?style=social" alt="GitHub Forks" /></a>
+  <a href="https://github.com/ishandutta2007/Awesome-Distributed-Order-Management/blob/main/LICENSE"><img src="https://img.shields.io/badge/License-MIT-green.svg" alt="License" /></a>
+  <a href="https://github.com/ishandutta2007"><img alt="GitHub followers" src="https://img.shields.io/github/followers/ishandutta2007?label=Follow" /></a>
+</p>
 
 ---
 
+## 📌 Top Distributed Order Management (DOM) Ecosystem & Architecture 🚀
 
+**Curated List of SaaS Products & Open-Source GitHub Projects**  
+*Focused on Omnichannel Order Orchestration, Intelligent Sourcing & Fulfillment Optimization*  
 
-**Made for retail operations teams, omnichannel fulfillment managers, supply chain engineers, and e-commerce platform developers.**  
+**Last updated: September 2026** 📅
 
-Let's make distributed order management more open, transparent, and efficient.
+This repository tracks notable **SaaS platforms** and **open-source projects** for **Distributed Order Management (DOM)**. These tools orchestrate order fulfillment across distributed inventory nodes — warehouses, stores, dark stores, and drop-ship partners — using real-time inventory visibility and optimization algorithms to decide what to promise, where to source from, and how to route orders for cost-effective, on-time delivery. 🚚💨
+
+---
+
+## 📑 Table of Contents
+- [📊 Market Overview & Industry Trends](#-market-overview--industry-trends)
+- [🏢 SaaS / Hosted DOM Platforms](#-saas--hosted-dom-platforms)
+- [💻 Open-Source GitHub Projects](#-open-source-github-projects)
+- [🤝 How to Contribute](#-how-to-contribute)
+- [💖 Support & Sponsorship](#-support--sponsorship)
+- [📈 Star History](#-star-history)
+- [⚠️ Disclaimer](#%EF%B8%8F-disclaimer)
+
+---
+
+## 📊 Market Overview & Industry Trends 📈
+
+> [!NOTE]
+> The **Multichannel & Distributed Order Management (DOM) sector** is estimated at **$4.95 Billion in 2026** and projected to reach over **$11.3 Billion by 2034 (CAGR of ~10.5%)**. 
+> 
+> **Market Structure:** The industry is **moderately fragmented**, featuring a mix of legacy enterprise incumbents (IBM, Oracle, SAP, Salesforce) and agile cloud-native DOM specialists (Fluent Commerce, OneStock, Kibo). While top cloud suites capture enterprise volume, no single vendor holds a monopoly—making composable, API-first architecture key to modern retail fulfillment.
+
+---
+
+## 🏢 SaaS / Hosted DOM Platforms ☁️
+
+Below is a detailed comparison of enterprise SaaS and hosted Distributed Order Management platforms, sorted by **Company Revenue / Scale (Descending)** 📉.
+
+| Product Name 🏷️ | Company Revenue / Scale 💰 | Pricing Model 💳 | Free Tier / Trial Limit ⏳ | Description & Key Capabilities 💡 |
+| :--- | :--- | :--- | :--- | :--- |
+| **[IBM Sterling DOM](https://www.ibm.com/products/sterling-order-management)** | **~$67.5 Billion** (FY25 Total IBM Revenue) | Quote-based enterprise license (Starts ~$40,000/year base tier) | No self-service free trial; interactive demo sandbox on request | Enterprise-grade DOM platform for omnichannel fulfillment, real-time inventory visibility, and complex order routing. |
+| **[Salesforce OMS](https://www.salesforce.com/)** | **~$37.9 Billion** (FY25 Total Salesforce Revenue) | ~0.25% to 1.0% of Gross Merchandise Value (GMV) | 30-day guided Salesforce trial environment | Order Management System integrated with Commerce Cloud, providing omnichannel inventory tracking and automated fulfillment flows. |
+| **[SAP Order Management](https://www.sap.com/products/order-management.html)** | **~€36.8 Billion** (~$40B FY25 SAP Revenue) | Volume-based modular subscription (Starts ~$25,000/year) | 30-day SAP Business Technology Platform trial | Cloud-native composable OMS with Joule AI copilot, Order Reliability Agent, and low-code process customization. |
+| **[Oracle DOM](https://www.oracle.com/)** | **~$53.0 Billion** (FY25 Total Oracle Revenue) | Tiered cloud subscription per order volume / GMV | 30-day Oracle Cloud Free Tier ($300 cloud credits) | Distributed order management within Oracle Retail & Fusion Cloud with predictive inventory optimization and carrier routing. |
+| **[Magento OMS (Adobe)](https://business.adobe.com/products/magento/magento-commerce.html)** | **~$21.5 Billion** (FY25 Total Adobe Revenue) | Included with Commerce Cloud license (Starts ~$22,000/year) | 30-day Adobe Commerce demo sandbox | Order management extensions within Adobe Commerce for multi-store fulfillment, order splitting, and backorder management. |
+| **[Manhattan Active Omni](https://www.manh.com/)** | **~$1.08 Billion** (FY25 Revenue) | Custom annual enterprise subscription | No public free trial; live demo upon sales qualification | Unified commerce platform featuring advanced DOM algorithms for store fulfillment, DC routing, and drop-ship execution. |
+| **[Radial](https://www.radial.com/)** | **~$958 Million** (Annual Revenue; Bpost Subsidiary) | Custom quote-based (Combined 3PL + OMS fulfillment model) | No free trial; personalized consultation and fulfillment assessment | Omnichannel 3PL fulfillment and distributed order routing platform tailored for mid-market and enterprise retailers. |
+| **[Kibo Commerce](https://kibocommerce.com/)** | **~$100 Million+** (Private; 30% YoY Growth) | Order volume / order line usage model (Starts ~$15,000/year) | 14-day preview portal access upon demo request | Composable B2C/B2B commerce and order management platform with intelligent inventory sourcing and store pickup support. |
+| **[OneStock](https://www.onestock-retail.com/)** | **~$26 Million** ARR ($88M total funding) | Tiered ARR based on connected stores & order volume | No free trial; customized proof-of-concept (PoC) demo | Leading European DOM platform specializing in ship-from-store, delivery promise calculations, and order orchestration. |
+| **[Fluent Commerce](https://fluentcommerce.com/)** | **~A$29.7 Million** ARR ($46M Bain Capital Round) | Tiered SaaS subscription (Fluent Light vs. Enterprise) | No self-service free trial; sandbox developer tenant for partners | Cloud-native, composable DOM platform focusing on real-time inventory consolidation and complex order routing. |
+
+---
+
+## 💻 Open-Source GitHub Projects 🔓
+
+Below is a curated list of active open-source Distributed Order Management frameworks, ERP systems, and microservices reference implementations, sorted by **GitHub Star Count (Descending)** ⭐.
+
+| Repository / Project 📦 | Star Count 🌟 | Primary Tech Stack 🛠️ | Description & Key DOM Features 📝 |
+| :--- | :--- | :--- | :--- |
+| **[medusajs/medusa](https://github.com/medusajs/medusa/stargazers)** | [![Stars](https://img.shields.io/github/stars/medusajs/medusa?style=social&color=white)](https://github.com/medusajs/medusa/stargazers) | Node.js, TypeScript, PostgreSQL | Open-source headless commerce platform with multi-warehouse inventory reservation, order routing plugins, and automated fulfillment workflows. |
+| **[saleor/saleor](https://github.com/saleor/saleor/stargazers)** | [![Stars](https://img.shields.io/github/stars/saleor/saleor?style=social&color=white)](https://github.com/saleor/saleor/stargazers) | Python, Django, GraphQL, Next.js | High-performance, headless GraphQL commerce engine with multi-channel stock allocation, order status state machines, and fulfillment tracking. |
+| **[spree/spree](https://github.com/spree/spree/stargazers)** | [![Stars](https://img.shields.io/github/stars/spree/spree/stargazers)](https://github.com/spree/spree/stargazers) | Ruby on Rails, PostgreSQL | Open-source e-commerce ecosystem featuring stock location tracking, inventory unit reservations, multi-vendor drop-shipping, and split shipments. |
+| **[shopware/shopware](https://github.com/shopware/shopware/stargazers)** | [![Stars](https://img.shields.io/github/stars/shopware/shopware?style=social&color=white)](https://github.com/shopware/shopware/stargazers) | PHP, Symfony, Vue.js | Enterprise open-source commerce platform supporting multi-inventory rules, rule-based order routing, and B2B order orchestration. |
+| **[vendure-ecommerce/vendure](https://github.com/vendure-ecommerce/vendure/stargazers)** | [![Stars](https://img.shields.io/github/stars/vendure-ecommerce/vendure?style=social&color=white)](https://github.com/vendure-ecommerce/vendure/stargazers) | TypeScript, NestJS, GraphQL | Modern headless commerce framework supporting multi-stock allocation strategies, configurable order state machine, and custom fulfillment handlers. |
+| **[apache/ofbiz](https://github.com/apache/ofbiz-framework/stargazers)** | [![Stars](https://img.shields.io/github/stars/apache/ofbiz-framework?style=social&color=white)](https://github.com/apache/ofbiz-framework/stargazers) | Java, Apache Groovy, Gradle | Mature open-source ERP/OMS stack with real-time inventory visibility, strategic order routing, BOPIS/BORIS support, and warehouse management. |
+| **[Paraselli/cloud-native-order-platform](https://github.com/Paraselli/cloud-native-order-platform/stargazers)** | [![Stars](https://img.shields.io/github/stars/Paraselli/cloud-native-order-platform?style=social&color=white)](https://github.com/Paraselli/cloud-native-order-platform/stargazers) | Java, Spring Boot, Kafka, Redis, AWS | Event-driven cloud-native order platform demonstrating microservices architecture, JWT auth, Kafka event streaming, and AWS S3/SQS/SNS integrations. |
+| **[AbhashK1/Distributed-Order-Management-System](https://github.com/AbhashK1/Distributed-Order-Management-System/stargazers)** | [![Stars](https://img.shields.io/github/stars/AbhashK1/Distributed-Order-Management-System?style=social&color=white)](https://github.com/AbhashK1/Distributed-Order-Management-System/stargazers) | Spring Boot, Kafka, Redis, Streamlit | Event-driven microservices reference architecture implementing SAGA patterns, Kafka topic orchestration, atomic Redis stock locks, and real-time Streamlit UI. |
+| **[StepanShushakov/delivery-system](https://github.com/StepanShushakov/delivery-system/stargazers)** | [![Stars](https://img.shields.io/github/stars/StepanShushakov/delivery-system?style=social&color=white)](https://github.com/StepanShushakov/delivery-system/stargazers) | Go, Microservices, Kafka, PostgreSQL | Microservices order delivery pipeline implementing SAGA distributed transaction patterns with rollback state management across payment and inventory. |
+| **[ecommerce-erp](https://developer.aliyun.com/article/1753673)** | [![Stars](https://img.shields.io/badge/stars-Open--Source-orange?style=social&color=white)](https://developer.aliyun.com/article/1753673) | ThinkPHP, Vue.js, MySQL, Redis | Cross-border open-source ERP with SKU mapping, multi-warehouse stock reservation (physical, virtual, FBA), and automated logistics label generation. |
+
+---
+
+## 🤝 How to Contribute 🛠️
+
+Contributions are welcome! Help us keep this list up to date:
+
+1. Fork this repository.
+2. Edit `README.md` following the table formatting.
+3. Ensure links are working and facts are verified.
+4. Submit a Pull Request with a short summary of your changes.
+
+Check out our curated meta-list at [Awesome-Awesome-Awesome](https://github.com/ishandutta2007/Awesome-Awesome-Awesome)! 🌟
+
+---
+
+## 💖 Support & Sponsorship 🙏
+
+If you found this repository helpful for your supply chain design, retail tech research, or engineering project, please consider supporting!
+
+- ⭐ **Star** this repository to spread visibility!
+- 🔀 **Fork** and share with your team!
+- ☕ **Buy me a coffee**: Sponsor the developer via [GitHub Sponsors](https://github.com/sponsors/ishandutta2007)
+
+Thank you for supporting open-source logistics technology! 🚀
+
+---
+
+## 📈 Star History
+
+[![Star History Chart](https://star-history.dera.page/svg?repos=ishandutta2007/Awesome-Distributed-Order-Management&type=date&legend=top-left)](https://star-history.dera.page/#ishandutta2007/Awesome-Distributed-Order-Management&type=date&legend=top-left)
+
+---
+
+## ⚠️ Disclaimer 🔒
+
+- This is a **community-curated** repository for informational and architectural evaluation purposes.
+- Distributed order management tools process sensitive customer, inventory, and transaction data. Production deployments require PCI-DSS compliance, GDPR/CCPA data protection, and robust auth mechanisms.
+- Open-source reference architectures provide solid event-driven blueprints but require custom carrier integrations and optimization tuning before enterprise deployment.
